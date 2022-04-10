@@ -17,6 +17,8 @@ app.get('/api/courses', (req, res) => {
   res.send(courses);
 })
 
+app.set('port', process.env.PORT || 3000)
+
 // api/courses/1
 
 app.get('/api/courses/:id', (req, res) => {

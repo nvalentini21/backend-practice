@@ -9,6 +9,9 @@ const courses = [
   {id:2, name: 'course2'},
   {id:3, name: 'course3'}
 ]
+
+app.set('port', process.env.PORT || 3000)
+
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
@@ -41,6 +44,7 @@ if (error){
   courses.push(course)
   res.send(course);
 })
+
 
 app.put('/apli/course/:id', (req, res) => {
   const course = courses.find(c => c.id === parseInt(req.params.id))
