@@ -72,6 +72,5 @@ const validateCourse = (course) => {
   return schema.validate(course)
 }
 
-// const enviornment = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`))
